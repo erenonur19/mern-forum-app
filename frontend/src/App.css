@@ -1,0 +1,28 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+}
+.form{
+  border-radius: 10px;
+  background-color: aquamarine;
+  padding: 100px;
+}
+.form h1,input,button{
+  display: block;
+  margin-bottom: 7vh;
+  padding: 10px;
+  width: 100%;
+  border: 0px solid black;
+  border-radius: 5px;
+}
