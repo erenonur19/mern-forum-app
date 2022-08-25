@@ -9,10 +9,12 @@ const userSchema=new Schema({
     },
     password:{
         type:String,
-        unique:true,
+        minlength:6,
         required:true,
     },
-    date: { type: Date, default: Date.now },
+    date: { type: Date, default: Date.now 
+    },
+    
 })
 
 const User=mongoose.model('User', userSchema);
