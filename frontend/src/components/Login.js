@@ -1,6 +1,9 @@
-import React from 'react'
+import {useContext} from 'react'
+import UserContext from '../context/UserContext'
 
 function Login() {
+
+  const {setLor}=useContext(UserContext)
   return (
     <div className='form'>
         <h1>Oturum Aç</h1>
@@ -12,7 +15,10 @@ function Login() {
         <a href='/'>Şifrenizi mi unuttunuz? </a>
         <button className='btn'>Oturum açın</button>
         
-        <div className='or'>Üye değil misiniz? <a href='/'>Hemen Katılın</a></div>
+        <div className='or'>Üye değil misiniz? <a href='/' onClick={(e)=>{
+        e.preventDefault()
+        setLor(false)
+}}>Hemen Katılın</a></div>
         {/* <button className='btn' style={{backgroundColor:'#fff',color:'#0073b1', border:'1px solid black'}}>Üye Ol</button> */}
        
     </div>

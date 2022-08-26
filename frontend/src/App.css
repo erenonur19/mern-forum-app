@@ -119,3 +119,7 @@ a:hover{
   font-size: 0.9rem;
   margin-top: 2vh;
 }
+
+.f-size p,a{
+  font-size: 0.8rem !important;
+}
