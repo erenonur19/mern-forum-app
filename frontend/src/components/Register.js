@@ -5,9 +5,9 @@ import axios from 'axios'
 import {Formik, Form} from 'formik'
 import * as Yup from 'yup'
 import TextField from './TextField'
+import{useNavigate} from "react-router-dom"
 
 const Register = () => {
-
   const [error,setError]=useState('')
   const validate=Yup.object({
     username:Yup.string()
@@ -17,7 +17,8 @@ const Register = () => {
     .min(8,'Şifreniz en az 8 karakter olmalı.')
     .required('Şifre boş bırakılamaz')
   })
-  const {setLor}=useContext(UserContext)
+  const {setLor,setUser, setLogged}=useContext(UserContext)
+  const navigate=useNavigate()
 
   return (
     <Formik
@@ -34,7 +35,11 @@ const Register = () => {
       .then(function (response) {
         setError(`Hoşgeldin ${response.data.user.username}, 
         \n yönlendiriliyor.. `)
-        console.log(response);
+        setUser({
+          username:response.data.user.username
+        })
+        setLogged(true)
+        navigate('/homepage')
       })
       .catch(function (error) {
         setError(error.response.data.message)
@@ -58,7 +63,10 @@ const Register = () => {
                         </div>
                         <div style={{color:'red',}}>{error}</div>
                         
+                        
                         <button type='submit' className='btn'>Kabul Et ve Katıl</button>
+                        
+                        
                         
                         <div className='or'>Üye misiniz? <a href='/' onClick={(e)=>{
                         e.preventDefault()

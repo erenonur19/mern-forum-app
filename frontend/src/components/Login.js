@@ -1,9 +1,12 @@
 import {useContext} from 'react'
 import UserContext from '../context/UserContext'
+import { useState } from 'react'
+import axios from 'axios'
 
 function Login() {
 
   const {setLor}=useContext(UserContext)
+  const[error,setError]=useState('')
   return (
     <div className='form'>
         <h1>Oturum Aç</h1>
@@ -14,6 +17,7 @@ function Login() {
         <input placeholder="Şifre"></input>
         <a href='/'>Şifrenizi mi unuttunuz? </a>
         <button className='btn'>Oturum açın</button>
+        <div style={{color:'red',}}>{error}</div>
         
         <div className='or'>Üye değil misiniz? <a href='/' onClick={(e)=>{
         e.preventDefault()
