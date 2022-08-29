@@ -5,11 +5,14 @@ const UserContext=createContext()
 export const UserProvider=({children}) =>{
 
     const[lor, setLor]=useState(true)
+    const [user,setUser]=useState({})
     const values={
         lor,
-        setLor
+        setLor,
+        user,
+        setUser,
     }
-
+    
 
     return <UserContext.Provider value={values}>{children}</UserContext.Provider>
 

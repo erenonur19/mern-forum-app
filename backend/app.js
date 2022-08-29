@@ -1,7 +1,9 @@
 const express = require('express')
 const dbConn=require('./db/dbConnection')
 const User=require('./model/User')
+const cors=require('cors')
 const app=express()
+app.use(cors())
 app.use(express.json())
 // const bodyParser = require('body-parser')
 // app.use(bodyParser.json())
@@ -15,9 +17,9 @@ app.get('/', (req,res)=>{
     res.send('Helllllo')
 })
 
-app.listen(3000, async()=>{
+app.listen(8080, async()=>{
     await dbConn()
-    console.log('3000 Portu dinleniyor');
+    console.log('8080 Portu dinleniyor');
 })
 
 

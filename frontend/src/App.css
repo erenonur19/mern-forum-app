@@ -123,3 +123,14 @@ a:hover{
 .f-size p,a{
   font-size: 0.8rem !important;
 }
+
+
+label {
+  font-size: .7rem;
+}
+
+.error {
+  position: relative;
+  color: red;
+  font-size: .6rem;
+}
