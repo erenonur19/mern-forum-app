@@ -17,7 +17,7 @@ const Register = () => {
     .min(8,'Şifreniz en az 8 karakter olmalı.')
     .required('Şifre boş bırakılamaz')
   })
-  const {setLor,setUser, setLogged}=useContext(UserContext)
+  const {setLor, setLogged}=useContext(UserContext)
   const navigate=useNavigate()
 
   return (
@@ -35,11 +35,9 @@ const Register = () => {
       .then(function (response) {
         setError(`Hoşgeldin ${response.data.user.username}, 
         \n yönlendiriliyor.. `)
-        setUser({
-          username:response.data.user.username
-        })
+
         setLogged(true)
-        navigate('/homepage')
+        navigate('/forum')
       })
       .catch(function (error) {
         setError(error.response.data.message)
