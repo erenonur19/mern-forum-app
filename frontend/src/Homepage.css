@@ -1,0 +1,93 @@
+body{
+    
+    box-sizing: border-box;
+    background-color: #f8f4ec;
+}
+.h-page{
+    background-color: #f8f4ec;
+    height: 94vh;
+    width: 100vw;
+    margin-top: 16vh;
+    display: flex;
+    padding-left: 18%;
+    padding-right: 18%;
+}
+.l-side{
+    flex: 15%;
+    /* background-color: red; */
+
+}
+.center{
+    flex: 25%;
+
+
+}
+.r-side{
+    flex: 15%;
+    /* background-color: green; */
+}
+
+.addP{
+    background-color: white;
+    margin-top: 2.0vh;
+    border-radius: 10px;
+    padding: 6px;
+}
+.post-inp{
+   
+    border-radius: 20px;
+    padding-bottom: 30px;
+}
+textarea{
+    resize: none;
+    padding: 10px;
+    border: 1px solid #c5c5c5;
+    width: 100%;
+}
+textarea, .post-title:focus{
+outline: none;
+}
+.post-title{
+    border: 1px solid #c5c5c5;
+}
+
+.post-top{
+    display: flex;
+    padding: 10px;
+}
+.post-top input{
+    margin-left: 15px;
+    border-radius: 10px;
+}
+
+.posts{
+    margin-top: 2rem;
+}
+
+.post{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 1vh;
+}
+
+.post-bilgi{
+    display: flex;
+    flex-direction: row;
+    padding-top: 8px;
+    
+}
+.post-bilgi-sag{
+    margin-left: auto;
+}
+.post-bilgi-orta{
+    padding-left: 10px;
+    padding-top: 2px;
+   font-size: 0.9em;
+}
+li {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
