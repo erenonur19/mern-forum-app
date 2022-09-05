@@ -6,6 +6,7 @@ import search from '../img/search.png'
 import home from '../img/home.png'
 import chat from '../img/chat.png'
 import user from '../img/user.png'
+import logout from '../img/logout.png'
 const Navbar = () => {
   return (
     <div className='navbar'>
@@ -24,6 +25,9 @@ const Navbar = () => {
             </ul>
           <ul><NavLink to='/forum/mesaj'><img style={{width:'32px'}} src={chat} alt='chat'/></NavLink></ul>
           <ul><NavLink to='/forum/profile'><img style={{width:'32px'}} src={user} alt='chat'/></NavLink></ul>
+          <ul><NavLink onClick={()=>{
+            localStorage.clear()
+          }} to='/'><img style={{width:'32px'}} src={logout} alt='chat'/></NavLink></ul>
         </li>
       
       

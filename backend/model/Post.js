@@ -16,12 +16,15 @@ const postSchema=new Schema({
         required:true,
     },
     image:{
-        type:String
+        type:String,
+        "default": ''
     },
     comments:{
         type:Array,
         "default":[]
-    }
+    },
+    date: { type: Date, default: Date.now 
+    },
 })
 
 const Post=mongoose.model('Post',postSchema)

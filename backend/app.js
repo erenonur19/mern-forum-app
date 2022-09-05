@@ -10,12 +10,8 @@ app.use(express.json())
 // app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use("/api/auth", require("./auth/route"))
+app.use("/api/content", require("./post/route"))
 
-
-
-app.get('/', (req,res)=>{
-    res.send('Helllllo')
-})
 
 app.listen(8080, async()=>{
     await dbConn()
