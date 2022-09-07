@@ -7,6 +7,7 @@ import NoPage from './components/NoPage'
 import HomepageLayout from './components/HomepageLayout'
 import Profile from './components/Profile';
 import Homepage from './components/Homepage'
+import SinglePage from './components/SinglePage';
 function App() {
 
 
@@ -20,8 +21,8 @@ function App() {
             <Route index element={<Container />} /> 
             
                   <Route path='/forum' element={<HomepageLayout />}>
-                  
                   <Route path='profile' element={<Profile/>}/>
+                  <Route path=':id' element={<SinglePage />}/>
                   <Route index element={<Homepage />} />
                   </Route>
             

@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import { useState } from 'react'
 import{useNavigate} from "react-router-dom"
 import Navbar from './Navbar'
+import '../Homepage.css'
 const Layout = () => {
     const navigate=useNavigate()
  
@@ -16,7 +17,7 @@ const Layout = () => {
         ?
         <div>
             <Navbar/>
-            <Outlet />
+            <Outlet/>
         </div>
         
         : <div>

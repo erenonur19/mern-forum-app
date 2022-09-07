@@ -19,10 +19,10 @@ const postSchema=new Schema({
         type:String,
         "default": ''
     },
-    comments:{
-        type:Array,
-        "default":[]
-    },
+    comments:[{
+        username:String,
+        comment:String
+    }],
     date: { type: Date, default: Date.now 
     },
 })

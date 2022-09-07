@@ -12,7 +12,7 @@ body{
   justify-content: center;
   width: 100vw;
   height: 90vh;
-  background-color: white;
+  background-color: white !important;
   color: black;
 }
 .form{
@@ -136,3 +136,4 @@ label {
   color: red;
   font-size: .6rem;
 }
+
