@@ -7,7 +7,7 @@ const Container = () => {
 
     const {lor}=useContext(UserContext)
   return (
-    <div>
+    <div className='log-reg'>
       <div style={{position:'absolute', top:20,left:20}}>
         <img alt='logo' src={logo} style={{width:'120px'}}/>
       </div>

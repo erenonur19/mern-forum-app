@@ -5,7 +5,10 @@
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue","Fira Sans",Ubuntu,Oxygen,"Oxygen Sans",Cantarell,"Droid Sans","Apple Color Emoji","Segoe UI Emoji","Segoe UI Emoji","Segoe UI Symbol","Lucida Grande",Helvetica,Arial,sans-serif;
   
 }
-body{
+.log-reg *{
+  background-color: #fff;
+}
+.log-reg{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,7 +92,6 @@ img{
   overflow: hidden;
   margin-top: 1vh;
 }
-
 .footer-nav{
   display: flex;
   align-items: center;
@@ -97,6 +99,7 @@ img{
   list-style: none;
   padding: 5px;
   width: 90vw;
+  
   
 }
 .footer-nav a{

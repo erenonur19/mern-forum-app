@@ -1,13 +1,9 @@
-body{
-    
-    box-sizing: border-box;
-    background-color: #f8f4ec;
-}
+
 .h-page{
     background-color: #f8f4ec;
     height: 96vh;
     width: 100vw;
-    margin-top: 18vh;
+    margin-top: 5.5vh;
     display: flex;
     flex-wrap: wrap;
 
@@ -205,20 +201,100 @@ li {
 
   .sp{
     display: flex;
-    height: 100vh;
-    width: 90vw;
-    margin-top: 20vh;
+    height: 100%;
+    width: 100vw;
+    margin-top: 3vh;
+    background-color: #f8f4ec;
+    
+    
   }
+  
   .sp-1{
     flex: 30%;
-
+    height: 100%;
   }
   .sp-2{
     flex: 45%;
-    padding: 2rem 5rem;
+    padding: 2rem 5rem;   
+
+    
    
   }
   .sp-3{
     flex: 25%;
+    height: 100%;
+  }
+  .post{
+    border-radius: 30px;
+    background-color: white;
+    padding: 0.5rem;
+  }
+  .comments{
+    
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vh;
 
   }
+  .comment{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin-bottom: 1vh;
+  }
+  .comment-2 p {
+    font-size: 0.7em;
+  }
+
+  .comment-2{
+    display: flex;
+    flex-direction: column;
+
+  }
+  .comment-3{
+    display: flex;
+    flex-direction: row;
+  }
+.ml-2{
+  margin-left: 1vw;
+}
+
+
+/* Profile Page */
+
+.profile {
+  display: flex;
+  margin-top: 6vh;
+  background-color: #f8f4ec;
+  height: 100vh;
+  width: 100vw;
+  flex-wrap: wrap;
+}
+.r-posts{
+  flex:15%;
+  margin-top: 2.1vh;
+
+ 
+}
+.r-post{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 2vh;
+
+  
+}
+.r-post h3{
+  color: blue;
+  cursor: pointer;
+}
+.r-post h3:hover{
+text-decoration: underline;
+}
+.r-pad{
+  flex:15%;
+  background-color: #f8f4ec;
+}

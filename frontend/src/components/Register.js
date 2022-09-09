@@ -37,6 +37,7 @@ const Register = () => {
         \n yönlendiriliyor.. `)
 
         setLogged(true)
+        localStorage.setItem('username',values.username)
         navigate('/forum')
       })
       .catch(function (error) {

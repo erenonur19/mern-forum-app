@@ -26,7 +26,10 @@ function Login() {
         .catch(function (error) {
           setError(error.response.data.message)
           console.log(error.response.data.message);
-        });
+        })
+        .finally(()=>{
+          setError('Bilinmeyen Hata.. Lütfen daha sonra deneyiniz')
+        })
         
        
     }

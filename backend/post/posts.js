@@ -59,3 +59,20 @@ exports.leaveComment=async(req,res,next)=>{
         })
     })
 }
+
+exports.getUsersPost=async(req,res,next)=>{
+    const {username}=req.body
+    await Post.find({username:username})
+    .then((postlar)=>{
+        return res.status(200).json({
+            message:"Postlar başarıyla geldi",
+            postlar,
+        })
+    }).catch((err)=>{
+        return res.status(400).json({
+            message:"Post bulunamadı",
+            error:err.message
+        })
+    })
+     
+}
